@@ -8,6 +8,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+    import Footer from "../components/Footer";
+
     <html lang="en">
       <body>
         <CartProvider>
