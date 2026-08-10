@@ -11,6 +11,9 @@ export default function Navbar() {
         <li className="hover:text-red-500 cursor-pointer">
   <a href="/cart">Cart</a>
 </li>
+<li className="hover:text-red-500 cursor-pointer">
+  <a href="/checkout">Checkout</a>
+</li>
 
       </ul>
     </nav>
