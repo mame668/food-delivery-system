@@ -17,6 +17,9 @@ export default function Navbar() {
 <li className="hover:text-red-500 cursor-pointer">
   <a href="/orders">Orders</a>
 </li>
+<li className="hover:text-red-500 cursor-pointer">
+  <a href="/contact">Contact</a>
+</li>
 
       </ul>
     </nav>
