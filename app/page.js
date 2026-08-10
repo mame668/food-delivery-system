@@ -79,6 +79,83 @@ export default function Home() {
 </button>
 
     </div>
+{/* Shiro */}
+<div className="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+  <img src="/shiro.png" alt="Shiro" className="rounded-xl mb-4" />
+  <h3 className="text-2xl font-semibold">Shiro</h3>
+  <p className="text-gray-600 mt-2">$6.50</p>
+  <button
+    onClick={() => addToCart({ name: "Shiro", price: 6.50 })}
+    className="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600"
+  >
+    Add to Cart
+  </button>
+</div>
+
+{/* Doro Wat */}
+<div className="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+  <img src="/dorowat.png" alt="Doro Wat" className="rounded-xl mb-4" />
+  <h3 className="text-2xl font-semibold">Doro Wat</h3>
+  <p className="text-gray-600 mt-2">$12.00</p>
+  <button
+    onClick={() => addToCart({ name: "Doro Wat", price: 12.00 })}
+    className="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600"
+  >
+    Add to Cart
+  </button>
+</div>
+
+{/* Tibs */}
+<div className="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+  <img src="/tibs.png" alt="Tibs" className="rounded-xl mb-4" />
+  <h3 className="text-2xl font-semibold">Tibs</h3>
+  <p className="text-gray-600 mt-2">$10.00</p>
+  <button
+    onClick={() => addToCart({ name: "Tibs", price: 10.00 })}
+    className="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600"
+  >
+    Add to Cart
+  </button>
+</div>
+
+{/* Firfir */}
+<div className="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+  <img src="/firfir.png" alt="Firfir" className="rounded-xl mb-4" />
+  <h3 className="text-2xl font-semibold">Firfir</h3>
+  <p className="text-gray-600 mt-2">$8.00</p>
+  <button
+    onClick={() => addToCart({ name: "Firfir", price: 8.00 })}
+    className="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600"
+  >
+    Add to Cart
+  </button>
+</div>
+
+{/* Kitfo */}
+<div className="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+  <img src="/kitfo.png" alt="Kitfo" className="rounded-xl mb-4" />
+  <h3 className="text-2xl font-semibold">Kitfo</h3>
+  <p className="text-gray-600 mt-2">$14.00</p>
+  <button
+    onClick={() => addToCart({ name: "Kitfo", price: 14.00 })}
+    className="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600"
+  >
+    Add to Cart
+  </button>
+</div>
+
+{/* Sambusa */}
+<div className="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+  <img src="/sambusa.png" alt="Sambusa" className="rounded-xl mb-4" />
+  <h3 className="text-2xl font-semibold">Sambusa</h3>
+  <p className="text-gray-600 mt-2">$3.00</p>
+  <button
+    onClick={() => addToCart({ name: "Sambusa", price: 3.00 })}
+    className="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600"
+  >
+    Add to Cart
+  </button>
+</div>
 
   </div>
 </section>
