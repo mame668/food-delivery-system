@@ -8,6 +8,10 @@ export default function Navbar() {
         <li className="hover:text-red-500 cursor-pointer">Menu</li>
         <li className="hover:text-red-500 cursor-pointer">Orders</li>
         <li className="hover:text-red-500 cursor-pointer">Contact</li>
+        <li className="hover:text-red-500 cursor-pointer">
+  <a href="/cart">Cart</a>
+</li>
+
       </ul>
     </nav>
   );

@@ -1,7 +1,13 @@
+"use client";
+import { useContext } from "react";
+import { CartContext } from "../components/CartContext";
+
 import Navbar from "../components/Navbar";
 
 export default function Home() {
   return (
+    const { addToCart } = useContext(CartContext);
+
     <div>
       <Navbar />
 
@@ -37,9 +43,13 @@ export default function Home() {
       <img src="/food1.png" alt="Burger" className="rounded-xl mb-4" />
       <h3 className="text-2xl font-semibold">Classic Burger</h3>
       <p className="text-gray-600 mt-2">$8.99</p>
-      <button className="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600">
-        Add to Cart
-      </button>
+    <button
+  onClick={() => addToCart({ name: "Classic Burger", price: 8.99 })}
+  className="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600"
+>
+  Add to Cart
+</button>
+
     </div>
 
     {/* Item 2 */}
@@ -47,9 +57,13 @@ export default function Home() {
       <img src="/food2.png" alt="Pizza" className="rounded-xl mb-4" />
       <h3 className="text-2xl font-semibold">Pepperoni Pizza</h3>
       <p className="text-gray-600 mt-2">$12.50</p>
-      <button className="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600">
-        Add to Cart
-      </button>
+     <button
+  onClick={() => addToCart({ name: "Classic Burger", price: 8.99 })}
+  className="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600"
+>
+  Add to Cart
+</button>
+
     </div>
 
     {/* Item 3 */}
@@ -57,9 +71,13 @@ export default function Home() {
       <img src="/food3.png" alt="Pasta" className="rounded-xl mb-4" />
       <h3 className="text-2xl font-semibold">Creamy Pasta</h3>
       <p className="text-gray-600 mt-2">$10.25</p>
-      <button className="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600">
-        Add to Cart
-      </button>
+   <button
+  onClick={() => addToCart({ name: "Classic Burger", price: 8.99 })}
+  className="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600"
+>
+  Add to Cart
+</button>
+
     </div>
 
   </div>
