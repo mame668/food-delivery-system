@@ -1,27 +1,25 @@
-export default function Navbar() {
+"use client";
+import { useContext } from "react";
+import { CartContext } from "./CartContext";
+
+export default function Navbar({ onCartOpen }) {
+  const { cart } = useContext(CartContext);
+
   return (
-    <nav className="bg-white shadow-md px-6 py-4 flex justify-between items-center">
+    <nav className="flex justify-between items-center px-6 py-4 bg-white shadow">
       <h1 className="text-2xl font-bold text-red-500">Food Delivery</h1>
 
-      <ul className="flex gap-6 text-gray-700 font-medium">
-        <li className="hover:text-red-500 cursor-pointer">Home</li>
-        <li className="hover:text-red-500 cursor-pointer">Menu</li>
-        <li className="hover:text-red-500 cursor-pointer">Orders</li>
-        <li className="hover:text-red-500 cursor-pointer">Contact</li>
-        <li className="hover:text-red-500 cursor-pointer">
-  <a href="/cart">Cart</a>
-</li>
-<li className="hover:text-red-500 cursor-pointer">
-  <a href="/checkout">Checkout</a>
-</li>
-<li className="hover:text-red-500 cursor-pointer">
-  <a href="/orders">Orders</a>
-</li>
-<li className="hover:text-red-500 cursor-pointer">
-  <a href="/contact">Contact</a>
-</li>
-
-      </ul>
+      <button
+        onClick={onCartOpen}
+        className="relative px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600"
+      >
+        Cart
+        {cart.length > 0 && (
+          <span className="absolute -top-2 -right-2 bg-black text-white text-xs px-2 py-1 rounded-full">
+            {cart.length}
+          </span>
+        )}
+      </button>
     </nav>
   );
 }

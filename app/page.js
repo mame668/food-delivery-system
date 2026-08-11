@@ -2,12 +2,14 @@
 import { useContext, useState } from "react";
 import { CartContext } from "../components/CartContext";
 import Navbar from "../components/Navbar";
+import CartSidebar from "../components/CartSidebar";
 
 export default function Home() {
   const { addToCart } = useContext(CartContext);
 
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("all");
+  const [cartOpen, setCartOpen] = useState(false);
 
   const items = [
     // Fast Food
@@ -31,7 +33,8 @@ export default function Home() {
 
   return (
     <div>
-      <Navbar />
+      {/* NAVBAR WITH CART BUTTON */}
+      <Navbar onCartOpen={() => setCartOpen(true)} />
 
       {/* HERO SECTION */}
       <section className="flex flex-col md:flex-row items-center justify-between px-6 py-16 bg-gray-50">
@@ -112,6 +115,9 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* CART SIDEBAR */}
+      <CartSidebar isOpen={cartOpen} onClose={() => setCartOpen(false)} />
     </div>
   );
 }
