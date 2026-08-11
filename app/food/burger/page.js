@@ -6,25 +6,72 @@ export default function FoodDetails({ params }) {
   const { addToCart } = useContext(CartContext);
 
   const foods = {
-    shiro: { name: "Shiro", price: 6.50, img: "/shiro.png", desc: "A delicious Ethiopian chickpea stew." },
-    dorowat: { name: "Doro Wat", price: 12.00, img: "/dorowat.png", desc: "Spicy Ethiopian chicken stew." },
-    tibs: { name: "Tibs", price: 10.00, img: "/tibs.png", desc: "Sautéed beef with spices." },
-    firfir: { name: "Firfir", price: 8.00, img: "/firfir.png", desc: "Shredded injera mixed with spicy sauce." },
-    kitfo: { name: "Kitfo", price: 14.00, img: "/kitfo.png", desc: "Minced raw beef seasoned with spices." },
-    sambusa: { name: "Sambusa", price: 3.00, img: "/sambusa.png", desc: "Crispy pastry filled with lentils." },
+    classicburger: {
+      name: "Classic Burger",
+      price: 8.99,
+      img: "/food1.png",
+      desc: "Juicy beef burger with cheese and fresh vegetables."
+    },
+    pepperonipizza: {
+      name: "Pepperoni Pizza",
+      price: 12.50,
+      img: "/food2.png",
+      desc: "Cheesy pizza topped with crispy pepperoni."
+    },
+    creamypasta: {
+      name: "Creamy Pasta",
+      price: 10.25,
+      img: "/food3.png",
+      desc: "Italian-style creamy pasta with herbs."
+    },
 
-    burger: { name: "Classic Burger", price: 8.99, img: "/food1.png", desc: "Juicy beef burger with cheese." },
-    pizza: { name: "Pepperoni Pizza", price: 12.50, img: "/food2.png", desc: "Cheesy pizza topped with pepperoni." },
-    pasta: { name: "Creamy Pasta", price: 10.25, img: "/food3.png", desc: "Creamy Italian-style pasta." },
+    shiro: {
+      name: "Shiro",
+      price: 6.50,
+      img: "/shiro.png",
+      desc: "Traditional Ethiopian chickpea stew."
+    },
+    dorowat: {
+      name: "Doro Wat",
+      price: 12.00,
+      img: "/dorowat.png",
+      desc: "Spicy Ethiopian chicken stew."
+    },
+    tibs: {
+      name: "Tibs",
+      price: 10.00,
+      img: "/tibs.png",
+      desc: "Sautéed beef with onions and spices."
+    },
+    firfir: {
+      name: "Firfir",
+      price: 8.00,
+      img: "/firfir.png",
+      desc: "Shredded injera mixed with spicy sauce."
+    },
+    kitfo: {
+      name: "Kitfo",
+      price: 14.00,
+      img: "/kitfo.png",
+      desc: "Minced raw beef seasoned with mitmita and butter."
+    },
+    sambusa: {
+      name: "Sambusa",
+      price: 3.00,
+      img: "/sambusa.png",
+      desc: "Crispy pastry filled with lentils."
+    }
   };
 
   const food = foods[params.name];
 
-  if (!food) return <div className="p-10">Food not found.</div>;
+  if (!food) {
+    return <div className="p-10 text-xl">Food not found.</div>;
+  }
 
   return (
-    <div className="px-6 py-16">
-      <img src={food.img} alt={food.name} className="rounded-xl w-80 mb-6" />
+    <div className="px-6 py-16 max-w-xl mx-auto">
+      <img src={food.img} alt={food.name} className="rounded-xl w-full mb-6" />
 
       <h1 className="text-4xl font-bold">{food.name}</h1>
       <p className="text-gray-600 mt-4">{food.desc}</p>
