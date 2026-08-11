@@ -90,14 +90,20 @@ export default function Home() {
           {filteredItems.map((item, index) => (
             <div
               key={index}
-              className="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition"
+              className="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition cursor-pointer"
+              onClick={() =>
+                window.location.href = `/food/${item.name.toLowerCase().replace(/ /g, "")}`
+              }
             >
               <img src={item.img} alt={item.name} className="rounded-xl mb-4" />
               <h3 className="text-2xl font-semibold">{item.name}</h3>
               <p className="text-gray-600 mt-2">${item.price}</p>
 
               <button
-                onClick={() => addToCart(item)}
+                onClick={(e) => {
+                  e.stopPropagation(); // prevents opening details page
+                  addToCart(item);
+                }}
                 className="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600"
               >
                 Add to Cart
